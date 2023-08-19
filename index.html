@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="game-area">
+  <div class="game-page">
+    <div class="head">
+      <img class="title" src="./images/logo-bonus.svg" alt="title" srcset="">
+    <div class="score-box">
+      SCORE <div class="score">0</div>
+    </div>
+    </div>
+    <div class="main">
+      <div class="fig">
+      <img class="pentagon" src="./images/bg-pentagon.svg" alt="pentagon" srcset="">
+      <div class="scissor"  onclick=selected(0)>
+      <img src="./images/icon-scissors.svg" alt="scissor" srcset="" >
+    </div>
+      <div class="paper" onclick=selected(1)>
+      <img src="./images/icon-paper.svg" alt="scissor" srcset="" >
+    </div>
+      <div class="rock" onclick=selected(2)>
+      <img src="./images/icon-rock.svg" alt="scissor" srcset="" >
+    </div>
+      <div class="lizard" onclick=selected(3)>
+      <img src="./images/icon-lizard.svg" alt="scissor" srcset="" >
+    </div>
+      <div class="spock" onclick=selected(4)>
+      <img src="./images/icon-spock.svg" alt="scissor" srcset="" >
+    </div>
+    </div>
+      <div class="play">
+        <div class="scissor">
+          <img src="./images/icon-scissors.svg" alt="scissor" srcset="" >
+        </div>
+          <div class="paper">
+          <img src="./images/icon-paper.svg" alt="scissor" srcset="" >
+        </div>
+          <div class="rock">
+          <img src="./images/icon-rock.svg" alt="scissor" srcset="" >
+        </div>
+          <div class="lizard">
+          <img src="./images/icon-lizard.svg" alt="scissor" srcset="" >
+        </div>
+          <div class="spock">
+          <img src="./images/icon-spock.svg" alt="scissor" srcset="" >
+        </div>
+      </div>
+      <div class="winning-area "> <div class="won active">YOU WIN</div>
+      <div class="lost active">YOU LOSE</div>
+      <div class="draw active">DRAW</div>
+        <button class="restart active" onclick=play()>PLAY AGAIN</button>
+      </div>
+    </div>
+    <div class="bottom">
+      <button onclick=show() class="rule-button">RULES</button>
+    </div>
+  </div>
+  <div class="rule-page">RULES
+    <div class="rules">
+      <img src="./images/image-rules-bonus.svg" alt="rules" srcset="">
+    </div>
+    <button onclick=hide() class="close">
+      <img src="./images/icon-close.svg" alt="close" srcset="">
+    </button>
+  </div>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>

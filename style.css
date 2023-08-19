@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body{
+  background-image: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+  letter-spacing: .15rem;
+}
+.game-page{
+  width: 100vw;
+  height: 100vh;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  align-items: center;
+  justify-content:space-between;
+  top: 5vh;
+  left: 10vw;
+  width: 80vw;
+  height: 16vh;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 5px;
+}
+.title{
+  transform: scale(.6);
+}
+.score-box{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 12vh;
+  height: 12vh;
+  margin-right: 1.5vh;
+  border-radius: 10px;
+  background: white;
+  font-size: .75rem;
+  padding-top: 1.5vw;
+  color: hsl(229, 64%, 46%);
+  font-weight: 800;
+}
+.score{
+  position:relative;
+  bottom: 3px;
+  text-align: center;
+  font-size: 2.7rem;
+  width: 50px;
+  color: #555;
+  letter-spacing: 1px;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 26vh;
+  width: 100vw;
+  height: 60vh;
+}
+.fig {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 250px;
+  height: 250px; 
+}
+.pentagon{
+  transform: scale(.7);
+}
+.scissor,.rock,.paper,.spock,.lizard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: white;
+  transform: scale(.6) translate(-100px,-185px);
+  border: 20px solid black;
+  box-shadow: 5px 3px 5px 0 #8888,inset 3px 3px 3px 0 #8888;
+  cursor: pointer;
+}
+.scissor:hover,.rock:hover,.paper:hover,.spock:hover,.lizard:hover {
+  filter: brightness(130%);
+}
+.scissor {
+  top: 65px;
+  left:115px;
+  border-color: hsl(39, 89%, 49%);
+}
+.paper {
+  top: 145px;
+  left: 220px;
+  border-color: hsl(230, 89%, 62%);
+}
+.spock {
+  top: 145px;
+  left:5px;
+  border-color: hsl(189, 59%, 53%);
+}
+.rock {
+  top: 270px;
+  left:175px;
+  border-color: hsl(349, 71%, 52%);
+}
+.lizard {
+  top: 270px;
+  left:45px;
+  border-color: hsl(261, 73%, 60%);
+}
+.play { 
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+}
+.play div {
+  display: none;
+}
+.play .left {
+  display: flex;
+  top: 80px;
+  left: 0px;
+  width: 190px;
+  height: 190px;
+  border-width: 25px;
+}
+.play .left::before {
+  position: absolute;
+  display: block;
+  content: "YOU PICKED";
+  top: 190px;
+  color: white;
+  font-weight: 800;
+  font-size: 1.2rem;
+  width: 120px;
+  height: 30px;
+}
+.play .right {
+  display: flex;
+  top: 80px;
+  left: 180px;
+  width: 190px;
+  height: 190px;
+  border-width: 25px;
+}
+.play .right::before,.play .same::before {
+  position: absolute;
+  display: block;
+  content: "THE HOUSE PICKED";
+  top: 190px;
+  color: white;
+  font-weight: 800;
+  font-size: 1.2rem;
+  width: 190px;
+  height: 30px;
+}
+.play .same {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 80px;
+  left: 90px;
+  width: 190px;
+  height: 190px;
+  border-width: 25px;
+}
+.play .same::before {
+  left: 0;
+  content: "BOTH PICKED";
+  font-size: 1.4rem;
+}
+.play .win {
+  box-shadow: 
+  0 0 0 40px #8883,
+  0 0 0 80px #8882,
+  0 0 0 120px #8881;
+}
+.winning-area {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  width: 250px; 
+  height: 130px;
+}
+.active {
+  display: none;
+}
+.restart {
+  margin-top: 15px;
+  width: 190px;
+  height: 50px;
+  font-size: 1rem;
+  color: #555;
+  letter-spacing: 2px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  bottom: 0;
+  width: 100vw;
+  height: 14vh;
+}
+.rule-button {
+  width: 35vw;
+  max-width: 200px;
+  height: 5vh;
+  background: transparent;
+  border-radius: 5px;
+  color: white;
+  font-size: .9rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.rule-button:hover {
+  background: #1115;
+}
+.rule-page{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  color: hsl(229, 25%, 31%);
+  font-size: 2rem;
+  font-weight: 700;
+  padding-top: 10vh;
+  background: white;
+}
+.rules{
+  padding-top: 10vh;
+}
+.close {
+  position: relative;
+  top: 15vh;
+  box-sizing: none;
+  border:none;
+  background: transparent;
+  cursor: pointer;
+}
