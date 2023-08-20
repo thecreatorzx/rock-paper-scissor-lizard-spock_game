@@ -9,7 +9,15 @@ body{
   background-image: radial-gradient(hsl(214, 47%, 23%),hsl(237, 49%, 15%));
   letter-spacing: .15rem;
 }
+.game-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .game-page{
+  position: relative;
+  display: flex;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
@@ -20,7 +28,6 @@ body{
   align-items: center;
   justify-content:space-between;
   top: 5vh;
-  left: 10vw;
   width: 80vw;
   height: 16vh;
   border: 3px solid hsl(217, 16%, 45%);
@@ -69,11 +76,24 @@ body{
   align-items: center;
   position: absolute;
   width: 250px;
-  height: 250px; 
+  height: 250px;
 }
 .pentagon{
   transform: scale(.7);
 }
+.fig::after{
+  content: 'PICK YOUR SIGN';
+  display: block;
+  text-align: center;
+  width: 100px;
+  height: 90px;
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
+  text-shadow: 1px 1px 0px white;
+}
+
 .scissor,.rock,.paper,.spock,.lizard {
   display: flex;
   justify-content: center;
@@ -242,7 +262,6 @@ body{
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: 0;
   width: 100vw;
   height: 100vh;
   color: hsl(229, 25%, 31%);
@@ -261,4 +280,101 @@ body{
   border:none;
   background: transparent;
   cursor: pointer;
+}
+@media screen and (min-width: 570px) {
+  .head{
+    max-width: 700px;
+  }
+  .pentagon{
+    transform: scale(1);
+  }
+  .scissor {
+    width: 180px;
+    height: 180px;
+    top: -5px;
+    left:98px; 
+  }
+  .paper {
+    width: 180px;
+    height: 180px;
+    top: 115px;
+    left: 250px; 
+  }
+  .spock {
+    width: 180px;
+    height: 180px;
+    top: 110px;
+    left:-55px; 
+  }
+  .rock {
+    width: 180px;
+    height: 180px;
+    top: 290px;
+    left:190px; 
+  }
+  .lizard {
+    width: 180px;
+    height: 180px;
+    top: 290px;
+    left:0px; 
+  }
+  .rule-button{
+    position: absolute;
+    right: 50px;
+    width: 120px;
+  }
+  .rule-page{
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    padding: 5vh;
+    align-items: start;
+    z-index: 3;
+  }
+  .blur::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #0005;
+    z-index: 2;
+  }
+  .rules {
+    padding: 3vh;
+  }
+  .close {
+    position: absolute;
+    top: 8vh;
+    right: 50px;
+  }.play .left {
+    left: -100px;
+  }
+  .play .right {
+    left: 280px; 
+  }
+  .play .same {
+    left : 90px;
+  }
+  .diff {
+    top: 15vh;
+  }
+  .fig::after{
+    font-size: 2.5rem;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .play .left ,.play .right{
+    transform: scale(.8) translate(-100px,-185px);
+  }  .play .left {
+    left: -130px;
+  }
+  .play .right {
+    left: 350px;
+  }
+  .play .same {
+    left: 110px;
+  }
 }

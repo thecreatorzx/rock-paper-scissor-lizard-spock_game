@@ -1,5 +1,6 @@
 const selections = ["scissor", "paper", "rock", "lizard", "spock"];
 let rulePage = document.querySelector(".rule-page");
+let gamePage = document.querySelector(".game-page");
 let main = document.querySelector(".fig");
 let game_area = document.querySelector(".play");
 let win_area = document.querySelector(".winning-area");
@@ -8,16 +9,18 @@ let lost = document.querySelector(".lost");
 let draw = document.querySelector(".draw");
 let restart = document.querySelector(".restart");
 let score = document.querySelector(".score");
-let total = 0;
+let total = 10;
 let select;
 let right;
 let left;
 let rand;
 function hide() {
   rulePage.style.display = "none";
+  gamePage.classList.remove("blur");
 }
 function show() {
   rulePage.style.display = "flex";
+  gamePage.classList.add("blur");
 }
 function selected(a) {
   select = a;
@@ -51,6 +54,7 @@ function selected(a) {
       draw.classList.add("active");
       left.classList.add("win");
       restart.classList.remove("active");
+      win_area.classList.add("diff");
       total++;
       score.innerHTML = total;
     } else if (a == rand) {
@@ -67,6 +71,7 @@ function selected(a) {
       draw.classList.add("active");
       right.classList.add("win");
       restart.classList.remove("active");
+      win_area.classList.add("diff");
       if (total != 0) {
         total--;
       }
@@ -88,4 +93,21 @@ function play() {
   restart.classList.add("active");
   left.classList.remove("win");
   right.classList.remove("win");
+  win_area.classList.remove("diff");
 }
+function colorchanger(a) {
+  a++;
+  a = a % 5;
+  let colour = [
+    "hsl(39, 89%, 49%)",
+    "hsl(230, 89%, 62%)",
+    "hsl(189, 59%, 53%)",
+    "hsl(349, 71%, 52%)",
+    "hsl(261, 73%, 60%)",
+  ];
+  main.style.color = `${colour[a]}`;
+  setTimeout(() => {
+    colorchanger(a);
+  }, 500);
+}
+colorchanger(0);
