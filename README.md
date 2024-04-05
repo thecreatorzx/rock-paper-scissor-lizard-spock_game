@@ -46,4 +46,4 @@ Not sure what Rock, Paper, Scissors, Lizard, Spock is? [Check out this clip from
 ## Credits
 
 Hey there! My name is Mohd Saad. I am an aspiring Web Developer and currently a Btech student.
-If you like this project then you can star this repo and if you want to work in a team on any project, contact me via mail or on my [https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white](https://www.linkedin.com/in/webdevmsaad/) profile.
+If you like this project then you can star this repo and if you want to work in a team on any project, contact me via mail or on my ![image]({https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white})(https://www.linkedin.com/in/webdevmsaad/) profile.
