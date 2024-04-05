@@ -38,10 +38,9 @@ Not sure what Rock, Paper, Scissors, Lizard, Spock is? [Check out this clip from
 - Select one amongst the five possible options.
 - The computer also selects one randomly.
 - Based on the rules (listed above) the winner is decided.
-
-* The points and added or subtracted from the total.
-* At start 10 points are given to each player.
-* _Something happens when your score goes below 0, check it out_
+- The points are added or subtracted from the total.
+- At start 10 points are given to each player.
+- _Something happens when your score goes below 0, check it out_
 
 ## Me
 
