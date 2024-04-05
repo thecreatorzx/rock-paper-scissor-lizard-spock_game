@@ -12,7 +12,7 @@ Thanks for checking out my front-end project.
 - CSS and
 - JavaScript.
 
-**Play Rock, Paper, Scissors, Lizard, Spock against the computer**
+**Play Rock, Paper, Scissors, Lizard, Spock against the computer [Click Here](https://thecreatorzx.github.io/rock-paper-scissor-lizard-spock_game/)**
 
 ### Points
 
