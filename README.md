@@ -35,15 +35,15 @@ Not sure what Rock, Paper, Scissors, Lizard, Spock is? [Check out this clip from
 
 ## How to play ?
 
-- Select one amont the five possible options.
+- Select one amongst the five possible options.
 - The computer also selects one randomly.
-- Based on the rules(listed above) the winner is decided.
+- Based on the rules (listed above) the winner is decided.
 
 * The points and added or subtracted from the total.
 * At start 10 points are given to each player.
-* _Something happens when your score goes below 10, check it out_
+* _Something happens when your score goes below 0, check it out_
 
-## Credits
+## Me
 
 Hey there! My name is Mohd Saad. I am an aspiring Web Developer and currently a Btech student.
 If you like this project then you can star this repo and if you want to work in a team on any project, contact me via mail or on my [LinkedIn](https://www.linkedin.com/in/webdevmsaad/) profile.
